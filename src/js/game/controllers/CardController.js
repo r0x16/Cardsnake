@@ -76,6 +76,6 @@ export default class CardController {
     const slot = this.slots[idx];
     const card = this.cards[idx];
     const src = card ? card.imageSrc : 'assets/cards/back.png';
-    slot.innerHTML = `<img src="${src}" alt="${card ? card.name : 'back'}" width="110" height="168"/>`;
+    slot.innerHTML = `<img src="${src}" alt="${card ? card.name : 'back'}" />`;
   }
 } 

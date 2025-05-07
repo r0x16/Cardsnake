@@ -29,7 +29,7 @@ export default class HighScoreController {
       const rowsHtml = scores.map((s, i) => {
         const pos = i + 1;
         let ordinal = pos === 1 ? '1st' : pos === 2 ? '2nd' : pos === 3 ? '3rd' : pos + 'th';
-        const medalImg = pos <= 3 ? `<img src="./assets/${ordinal}.png" alt="Medalla ${ordinal}" width="30" height="30">` : '';
+        const medalImg = pos <= 3 ? `<img src="./assets/${ordinal}.png" alt="Medalla ${ordinal}" width="50" height="50">` : '';
         return `
           <div class="hs-row">
             <span class="hs-cell hs-rank">${ordinal}</span>
