@@ -62,7 +62,7 @@ canvas {
 #startScreen #logo {
   max-height: 45vh;
   width: auto;
-  margin-bottom: 5vh;
+  margin-bottom: 2vh;
 }
 #startScreen button {
   background: none;
@@ -269,6 +269,9 @@ canvas {
   }
 }
 @media (min-width: 1024px) {
+  .card-slot {
+    width: 30%;
+  }
   canvas {
     width: 500px;
     /* height: auto; seguirá respetando la proporción */
