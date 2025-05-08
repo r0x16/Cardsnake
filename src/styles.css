@@ -54,7 +54,6 @@ canvas {
   background: url('./assets/start-screen-bg.png') center center / cover no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   padding: 5vh 0;
   color: white;
@@ -85,6 +84,7 @@ canvas {
   display: none;
 }
 #startScreen #footer {
+  padding-top: 15px;
   font-family: Arial, sans-serif;
   font-size: 2vh;
 }
