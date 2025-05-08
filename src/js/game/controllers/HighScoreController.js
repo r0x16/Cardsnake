@@ -4,6 +4,7 @@ export default class HighScoreController {
     this.modal = document.getElementById(modalId);
     this.list = document.getElementById(listId);
     this.closeButton = document.getElementById(closeModalId);
+    this.overlay = document.getElementById('modalOverlay');
   }
 
   onRequestShow(callback) {
@@ -15,6 +16,7 @@ export default class HighScoreController {
   }
 
   show(scores) {
+    this.overlay.style.display = 'block';
     if (scores.length === 0) {
       this.list.innerHTML = '<p>No hay puntajes guardados.</p>';
     } else {
@@ -47,5 +49,6 @@ export default class HighScoreController {
 
   hide() {
     this.modal.style.display = 'none';
+    this.overlay.style.display = 'none';
   }
 } 
