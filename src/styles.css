@@ -17,7 +17,7 @@ canvas {
   background-size: cover;
   background-position: center center;
   border: 5px solid #1d2a25;
-  width: 98%;
+  width: 90%;
   height: auto;
 }
 
@@ -30,7 +30,7 @@ canvas {
 }
 
 .card-slot {
-  width: 30%;
+  width: 25%;
   height: auto;
   background: #999;
   border-radius: 30px;
@@ -128,9 +128,6 @@ canvas {
 }
 
 #controls {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   margin: 0;
   padding: 10px 0;
   display: flex !important;
@@ -138,7 +135,6 @@ canvas {
   align-items: center;
   user-select: none;
   width: 100%;
-  background: transparent;
 }
 #row-up, #row-down {
   display: flex;
