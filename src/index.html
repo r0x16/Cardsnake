@@ -7,9 +7,15 @@
 </head>
 <body>
 <div id="startScreen">
-  Cardsnake
-  <button id="startButton">PLAY</button>
-  <button id="scoreButton">Hi-Scores</button>
+  <div class="logo-container">
+    <img id="logo" src="assets/logo.png" alt="Cardsnake Logo" />
+  </div>
+  <div class="actions-container">
+    <div id="enterHint">Press ENTER key to start</div>
+    <button id="startButton"><img src="assets/play-button.png" alt="Iniciar partida" /></button>
+    <button id="scoreButton"><img src="assets/records-button.png" alt="Hi-Scores" /></button>
+  </div>
+  <div id="footer">2025 - Brimilon.</div>
 </div>
 <div id="modal">
   <h2>Hi-Scores</h2>
@@ -24,12 +30,20 @@
 </div>
 <div id="controls">
   <div id="row-up">
-    <button class="control-button" id="up">↑</button>
+    <button class="control-button" id="up">
+      <img src="assets/directional-button.png" alt="Up" />
+    </button>
   </div>
   <div id="row-middle">
-    <button class="control-button" id="left">←</button>
-    <button class="control-button" id="down">↓</button>
-    <button class="control-button" id="right">→</button>
+    <button class="control-button" id="left">
+      <img src="assets/directional-button.png" alt="Left" />
+    </button>
+    <button class="control-button" id="down">
+      <img src="assets/directional-button.png" alt="Down" />
+    </button>
+    <button class="control-button" id="right">
+      <img src="assets/directional-button.png" alt="Right" />
+    </button>
   </div>
 </div>
 <script type="module" src="script.js"></script>
