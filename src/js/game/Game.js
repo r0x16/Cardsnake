@@ -149,6 +149,9 @@ export default class Game {
       do {
         name = prompt('¡Nuevo Puntaje! Ingresa un nombre de 1 a 5 caracteres (solo letras o números):', lastName);
       } while (!regex.test(name));
+      if(name === null || name === '' || name === undefined) {
+        name = 'Worm';
+      }
       localStorage.setItem(lastNameKey, name);
       scores.push({ name, score: currentScore });
       scores.sort((a, b) => b.score - a.score);
