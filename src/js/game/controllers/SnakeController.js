@@ -4,18 +4,33 @@ export default class SnakeController {
   constructor(tileSize, boardController) {
     this.board = boardController;
     this.snake = new Snake(tileSize);
+    this.directionChanged = false;
+    this.queuedDirection = null;
   }
 
   reset() {
     this.snake = new Snake(this.snake.tileSize);
+    this.directionChanged = false;
+    this.queuedDirection = null;
   }
 
   setDirection(x, y) {
-    this.snake.setDirection(x, y);
+    if (!this.directionChanged) {
+      this.snake.setDirection(x, y);
+      this.directionChanged = true;
+    } else {
+      this.queuedDirection = { x, y };
+    }
   }
 
   move() {
     this.snake.move();
+    this.directionChanged = false;
+    if (this.queuedDirection) {
+      this.snake.setDirection(this.queuedDirection.x, this.queuedDirection.y);
+      this.directionChanged = true;
+      this.queuedDirection = null;
+    }
   }
 
   grow() {
